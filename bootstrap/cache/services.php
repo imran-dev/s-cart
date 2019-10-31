@@ -25,22 +25,24 @@
     21 => 'Illuminate\\View\\ViewServiceProvider',
     22 => 'Barryvdh\\Debugbar\\ServiceProvider',
     23 => 'Barryvdh\\DomPDF\\ServiceProvider',
-    24 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
-    25 => 'Intervention\\Image\\ImageServiceProvider',
-    26 => 'Laravel\\Tinker\\TinkerServiceProvider',
-    27 => 'Carbon\\Laravel\\ServiceProvider',
-    28 => 'UniSharp\\LaravelFilemanager\\LaravelFilemanagerServiceProvider',
-    29 => 'Barryvdh\\DomPDF\\ServiceProvider',
-    30 => 'Barryvdh\\Debugbar\\ServiceProvider',
-    31 => 'UniSharp\\LaravelFilemanager\\LaravelFilemanagerServiceProvider',
-    32 => 'Intervention\\Image\\ImageServiceProvider',
-    33 => 'App\\Providers\\AppServiceProvider',
-    34 => 'App\\Providers\\AuthServiceProvider',
-    35 => 'App\\Providers\\EventServiceProvider',
-    36 => 'App\\Providers\\RouteServiceProvider',
-    37 => 'App\\Providers\\ScartServiceProvider',
-    38 => 'App\\Providers\\ShoppingCartServiceProvider',
-    39 => 'App\\Admin\\Providers\\AdminServiceProvider',
+    24 => 'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider',
+    25 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
+    26 => 'Intervention\\Image\\ImageServiceProvider',
+    27 => 'Laravel\\Tinker\\TinkerServiceProvider',
+    28 => 'Carbon\\Laravel\\ServiceProvider',
+    29 => 'UniSharp\\LaravelFilemanager\\LaravelFilemanagerServiceProvider',
+    30 => 'Barryvdh\\DomPDF\\ServiceProvider',
+    31 => 'Barryvdh\\Debugbar\\ServiceProvider',
+    32 => 'UniSharp\\LaravelFilemanager\\LaravelFilemanagerServiceProvider',
+    33 => 'Intervention\\Image\\ImageServiceProvider',
+    34 => 'App\\Providers\\AppServiceProvider',
+    35 => 'App\\Providers\\AuthServiceProvider',
+    36 => 'App\\Providers\\EventServiceProvider',
+    37 => 'App\\Providers\\RouteServiceProvider',
+    38 => 'App\\Providers\\ScartServiceProvider',
+    39 => 'App\\Providers\\ShoppingCartServiceProvider',
+    40 => 'App\\Admin\\Providers\\AdminServiceProvider',
+    41 => 'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider',
   ),
   'eager' => 
   array (
@@ -178,6 +180,8 @@
     'translation.loader' => 'Illuminate\\Translation\\TranslationServiceProvider',
     'validator' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'validation.presence' => 'Illuminate\\Validation\\ValidationServiceProvider',
+    'command.ide-helper.generate' => 'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider',
+    'command.ide-helper.models' => 'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider',
     'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
   ),
   'when' => 
@@ -216,6 +220,9 @@
     array (
     ),
     'Illuminate\\Validation\\ValidationServiceProvider' => 
+    array (
+    ),
+    'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider' => 
     array (
     ),
     'Laravel\\Tinker\\TinkerServiceProvider' => 

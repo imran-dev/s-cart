@@ -13,7 +13,7 @@ return [
     |
      */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Any Time Bazar'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
      */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://s-cart.test'),
     'asset_url' => env('ASSET_URL', null),
 
     //This value will re-define in database with App\Providers\ScartServiceProvider
@@ -69,7 +69,7 @@ return [
     |
      */
 
-    'timezone' => 'Asia/ho_chi_minh',
+    'timezone' => 'Asia/Dhaka',
 
     /*
     |--------------------------------------------------------------------------
@@ -108,7 +108,7 @@ return [
     |
      */
 
-    'key' => env('APP_KEY'),
+    'key' => env('APP_KEY', 'base64:nvfPQNzRBwVtcmsLnUEtRX9wu44o+eTpeirdD/4AZsc='),
 
     'cipher' => 'AES-256-CBC',
 
@@ -171,6 +171,10 @@ return [
         App\Providers\ScartServiceProvider::class,
         App\Providers\ShoppingCartServiceProvider::class,
         App\Admin\Providers\AdminServiceProvider::class,
+
+        // IDE Helper
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
 
     ],
 

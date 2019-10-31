@@ -62,7 +62,7 @@ class UsersController extends Controller
         $obj = new AdminUser;
 
         if ($keyword) {
-            $obj = $obj->whereRaw('(id = ' . (int) $keyword . '  OR name like "%' . $keyword . '%" OR user_name like "%' . $keyword . '%"  )');
+            $obj = $obj->whereRaw('(id = ' . (int)$keyword . '  OR name like "%' . $keyword . '%" OR user_name like "%' . $keyword . '%"  )');
         }
         if ($sort_order && array_key_exists($sort_order, $arrSort)) {
             $field = explode('__', $sort_order)[0];
@@ -96,8 +96,7 @@ class UsersController extends Controller
                 'roles' => $showRoles,
                 'permission' => $showPermission,
                 'created_at' => $row['created_at'],
-                'action' => '
-                    <a href="' . route('admin_user.edit', ['id' => $row['id']]) . '"><span title="' . trans('user.admin.edit') . '" type="button" class="btn btn-flat btn-primary"><i class="fa fa-edit"></i></span></a>&nbsp;
+                'action' => '<a href="' . route('admin_user.edit', ['id' => $row['id']]).'"><span title="' . trans('user.admin.edit') . '" type="button" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></span></a>&nbsp;
                     ' . ((Admin::user()->id == $row['id'] || in_array($row['id'], SC_GUARD_ADMIN)) ? '' : '<span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('admin.delete') . '" class="btn btn-flat btn-danger"><i class="fa fa-trash"></i></span>')
                 ,
             ];
@@ -176,14 +175,13 @@ class UsersController extends Controller
 
         $data['url_delete_item'] = route('admin_user.delete');
 
-        return view('admin.screen.list')
-            ->with($data);
+        return view('admin.screen.list')->with($data);
     }
 
-/**
- * Form create new order in admin
- * @return [type] [description]
- */
+    /**
+     * Form create new order in admin
+     * @return [type] [description]
+     */
     public function create()
     {
         $data = [
@@ -202,10 +200,10 @@ class UsersController extends Controller
             ->with($data);
     }
 
-/**
- * Post create new order in admin
- * @return [type] [description]
- */
+    /**
+     * Post create new order in admin
+     * @return [type] [description]
+     */
     public function postCreate()
     {
         $data = request()->all();
@@ -249,9 +247,9 @@ class UsersController extends Controller
 
     }
 
-/**
- * Form edit
- */
+    /**
+     * Form edit
+     */
     public function edit($id)
     {
         $user = AdminUser::find($id);
@@ -272,9 +270,9 @@ class UsersController extends Controller
             ->with($data);
     }
 
-/**
- * update status
- */
+    /**
+     * update status
+     */
     public function postEdit($id)
     {
         $user = AdminUser::find($id);
@@ -323,10 +321,10 @@ class UsersController extends Controller
 
     }
 
-/*
-Delete list Item
-Need mothod destroy to boot deleting in model
- */
+    /*
+    Delete list Item
+    Need mothod destroy to boot deleting in model
+     */
     public function deleteList()
     {
         if (!request()->ajax()) {

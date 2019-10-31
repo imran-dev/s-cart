@@ -110,3 +110,7 @@
 #51 E:\\laragon\\www\\s-cart\\public\\install.php(14): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #52 {main}
 "} 
+[2019-11-01 03:36:20] local.ERROR: Trait 'Encore\Admin\Controllers\HasResourceActions' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Trait 'Encore\\Admin\\Controllers\\HasResourceActions' not found at E:\\laragon\\www\\s-cart\\app\\Admin\\Controllers\\Modules\\API\\ShopApiController.php:14)
+[stacktrace]
+#0 {main}
+"} 
