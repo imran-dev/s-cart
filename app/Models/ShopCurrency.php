@@ -1,7 +1,7 @@
 <?php
 #app/Models/ShopCurrency.php
 /**
- * @author Naruto <lanhktc@gmail.com>
+ * @author Imran <imrancse019@gmail.com>
  */
 namespace App\Models;
 

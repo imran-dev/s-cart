@@ -1080,7 +1080,7 @@ CREATE TABLE `shop_order` (
 
 LOCK TABLES `shop_order` WRITE;
 /*!40000 ALTER TABLE `shop_order` DISABLE KEYS */;
-INSERT INTO `shop_order` VALUES (1,1,5000,2000,0,1,1,1,0,7000,'USD',1.00,0,7000,'Naruto','Kun','ADDRESS 1','ADDRESS 2','VN','667151172','test@test.com','ok','Cash','ShippingStandard',NULL,NULL,NULL,'2019-10-25 11:21:06',NULL);
+INSERT INTO `shop_order` VALUES (1,1,5000,2000,0,1,1,1,0,7000,'USD',1.00,0,7000,'Imran','Kun','ADDRESS 1','ADDRESS 2','VN','667151172','test@test.com','ok','Cash','ShippingStandard',NULL,NULL,NULL,'2019-10-25 11:21:06',NULL);
 /*!40000 ALTER TABLE `shop_order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1653,7 +1653,7 @@ CREATE TABLE `shop_user` (
 
 LOCK TABLES `shop_user` WRITE;
 /*!40000 ALTER TABLE `shop_user` DISABLE KEYS */;
-INSERT INTO `shop_user` VALUES (1,'Naruto','Kun','test@test.com','$2y$10$s0KTFSMWTPw7utVXyj6Xj.uWmN0O41qgM5ByqfdoA3UzqfKY1tiQ.','ADDRESS 1','ADDRESS 2','VN','0667151172',NULL,1,1,'2019-10-25 11:21:06',NULL);
+INSERT INTO `shop_user` VALUES (1,'Imran','Kun','test@test.com','$2y$10$s0KTFSMWTPw7utVXyj6Xj.uWmN0O41qgM5ByqfdoA3UzqfKY1tiQ.','ADDRESS 1','ADDRESS 2','VN','0667151172',NULL,1,1,'2019-10-25 11:21:06',NULL);
 /*!40000 ALTER TABLE `shop_user` ENABLE KEYS */;
 UNLOCK TABLES;
 

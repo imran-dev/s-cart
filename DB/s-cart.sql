@@ -532,8 +532,8 @@ CREATE TABLE `admin_store_description` (
 --
 
 INSERT INTO `admin_store_description` (`config_id`, `lang`, `title`, `description`, `keyword`, `maintain_content`) VALUES
-(1, 'en', 'Demo S-cart : Free Laravel eCommerce for Business', 'Free website shopping cart for business', '', '<center><img src=\"/images/maintenance.png\" />\n<h3><span style=\"color:#e74c3c;\"><strong>Sorry! We are currently doing site maintenance!</strong></span></h3>\n</center>'),
-(1, 'vi', 'Demo S-cart: Mã nguồn website thương mại điện tử miễn phí cho doanh nghiệp', 'Laravel shopping cart for business', '', '<center><img src=\"/images/maintenance.png\" />\n<h3><span style=\"color:#e74c3c;\"><strong>Sorry! We are currently doing site maintenance!</strong></span></h3>\n</center>');
+(1, 'en', 'Any Time Bazar', 'Online Grocery Shop', '', '<center><img src=\"/images/maintenance.png\" />\n<h3><span style=\"color:#e74c3c;\"><strong>Sorry! We are currently doing site maintenance!</strong></span></h3>\n</center>'),
+(1, 'vi', 'Any Time Bazar', 'Online Grocery Shop', '', '<center><img src=\"/images/maintenance.png\" />\n<h3><span style=\"color:#e74c3c;\"><strong>Sorry! We are currently doing site maintenance!</strong></span></h3>\n</center>');
 
 -- --------------------------------------------------------
 
@@ -1330,7 +1330,7 @@ CREATE TABLE `shop_link` (
 INSERT INTO `shop_link` (`id`, `name`, `url`, `target`, `group`, `module`, `status`, `sort`) VALUES
 (1, 'lang::front.contact', 'route::pages::contact', '_self', 'menu', '', 1, 3),
 (2, 'lang::front.about', 'route::pages::about', '_self', 'menu', '', 1, 4),
-(3, 'S-Cart', 'https://s-cart.org', '_blank', 'menu', '', 1, 0),
+(3, 'S-Cart', 'http://imranhossain.me/', '_blank', 'menu', '', 1, 0),
 (4, 'lang::front.my_profile', '/member/login.html', '_self', 'footer', '', 1, 5),
 (5, 'lang::front.compare_page', '/compare.html', '_self', 'footer', '', 1, 4),
 (6, 'lang::front.wishlist_page', 'route::wishlist', '_self', 'footer', '', 1, 3);
@@ -1408,7 +1408,7 @@ CREATE TABLE `shop_order` (
 --
 
 INSERT INTO `shop_order` (`id`, `user_id`, `subtotal`, `shipping`, `discount`, `payment_status`, `shipping_status`, `status`, `tax`, `total`, `currency`, `exchange_rate`, `received`, `balance`, `first_name`, `last_name`, `address1`, `address2`, `country`, `phone`, `email`, `comment`, `payment_method`, `shipping_method`, `user_agent`, `ip`, `transaction`, `created_at`, `updated_at`) VALUES
-(1, 1, 20000, 2000, 0, 0, 1, 1, 0, 22000, 'USD', 1.00, 0, 22000, 'Naruto', 'Kun', 'ADDRESS 1', 'ADDRESS 2', 'VN', '667151172', 'test@test.com', 'ok', 'Cash', 'ShippingStandard', NULL, NULL, NULL, '2019-10-31 21:23:06', '2019-10-31 21:25:09');
+(1, 1, 20000, 2000, 0, 0, 1, 1, 0, 22000, 'USD', 1.00, 0, 22000, 'Imran', 'Kun', 'ADDRESS 1', 'ADDRESS 2', 'VN', '667151172', 'test@test.com', 'ok', 'Cash', 'ShippingStandard', NULL, NULL, NULL, '2019-10-31 21:23:06', '2019-10-31 21:25:09');
 
 -- --------------------------------------------------------
 
@@ -1949,7 +1949,7 @@ CREATE TABLE `shop_user` (
 --
 
 INSERT INTO `shop_user` (`id`, `first_name`, `last_name`, `email`, `password`, `address1`, `address2`, `country`, `phone`, `remember_token`, `status`, `group`, `created_at`, `updated_at`) VALUES
-(1, 'Naruto', 'Kun', 'test@test.com', '$2y$10$3i5FJTPaEm.1VHWEBVHpXOmQ9ZFPKRW2jlVrDxm/tI1MyRDUR1ohG', 'ADDRESS 1', 'ADDRESS 2', 'VN', '0667151172', NULL, 1, 1, '2019-10-31 21:23:06', NULL);
+(1, 'Imran', 'Kun', 'test@test.com', '$2y$10$3i5FJTPaEm.1VHWEBVHpXOmQ9ZFPKRW2jlVrDxm/tI1MyRDUR1ohG', 'ADDRESS 1', 'ADDRESS 2', 'VN', '0667151172', NULL, 1, 1, '2019-10-31 21:23:06', NULL);
 
 -- --------------------------------------------------------
 

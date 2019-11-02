@@ -554,7 +554,7 @@ class ShopCart extends GeneralController
 
 /**
  * Remove item from cart
- * @author lanhktc
+ * @author imrancse019
  */
     public function removeItem($id = null)
     {

@@ -1,7 +1,7 @@
 <?php
 /**
  * File function process currency
- * @author Naruto <lanhktc@gmail.com>
+ * @author Imran <imrancse019@gmail.com>
  * From version: S-cart 3.0
  */
 use App\Library\Helper;

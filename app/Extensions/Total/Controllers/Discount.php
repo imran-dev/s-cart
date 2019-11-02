@@ -36,8 +36,8 @@ class Discount extends \App\Http\Controllers\GeneralController
         $this->mask = '****-****';
         $this->discountService = new DiscountService;
         $this->version = '1.0';
-        $this->auth = 'Naruto';
-        $this->link = 'https://s-cart.org';
+        $this->auth = 'Imran';
+        $this->link = 'http://imranhossain.me/';
 
     }
 

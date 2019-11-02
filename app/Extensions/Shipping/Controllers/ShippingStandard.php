@@ -29,8 +29,8 @@ class ShippingStandard extends \App\Http\Controllers\GeneralController
         $this->title = trans($this->configType . '/' . $this->configCode . '/' . $this->configKey . '.title');
         $this->image = 'images/' . $this->configType . '/' . $this->configCode . '/' . $this->configKey . '.png';
         $this->version = '1.0';
-        $this->auth = 'Naruto';
-        $this->link = 'https://s-cart.org';
+        $this->auth = 'Imran';
+        $this->link = 'http://imranhossain.me/';
     }
 
     public function processData()
