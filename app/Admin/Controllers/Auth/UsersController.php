@@ -175,7 +175,7 @@ class UsersController extends Controller
 
         $data['url_delete_item'] = route('admin_user.delete');
 
-        return view('admin.screen.list')->with($data);
+        return view('admin.user.list')->with($data);
     }
 
     /**
@@ -196,7 +196,7 @@ class UsersController extends Controller
 
         ];
 
-        return view('admin.auth.user')
+        return view('admin.user.edit')
             ->with($data);
     }
 
@@ -266,7 +266,7 @@ class UsersController extends Controller
             'permission' => (new AdminPermission)->pluck('name', 'id')->all(),
             'url_action' => route('admin_user.edit', ['id' => $user['id']]),
         ];
-        return view('admin.auth.user')
+        return view('admin.user.edit')
             ->with($data);
     }
 
