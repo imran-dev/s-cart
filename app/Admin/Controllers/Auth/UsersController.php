@@ -7,6 +7,7 @@ use App\Admin\Models\AdminPermission;
 use App\Admin\Models\AdminRole;
 use App\Admin\Models\AdminUser;
 use App\Http\Controllers\Controller;
+use App\Library\Helper;
 use Illuminate\Http\Request;
 use Validator;
 
@@ -52,17 +53,17 @@ class UsersController extends Controller
         $sort_order = request('sort_order') ?? 'id_desc';
         $keyword = request('keyword') ?? '';
         $arrSort = [
-            'id__desc' => trans('user.admin.sort_order.id_desc'),
-            'id__asc' => trans('user.admin.sort_order.id_asc'),
-            'username__desc' => trans('user.admin.sort_order.username_desc'),
-            'username__asc' => trans('user.admin.sort_order.username_asc'),
-            'name__desc' => trans('user.admin.sort_order.name_desc'),
-            'name__asc' => trans('user.admin.sort_order.name_asc'),
+            'id__desc' => 'ID DESC',
+            'id__asc' => 'ID ASC',
+            'username__desc' => 'Name login DESC',
+            'username__asc' => 'Name login ASC',
+            'name__desc' => 'Name DESC',
+            'name__asc' => 'Name ASC',
         ];
         $obj = new AdminUser;
 
         if ($keyword) {
-            $obj = $obj->whereRaw('(id = ' . (int)$keyword . '  OR name like "%' . $keyword . '%" OR user_name like "%' . $keyword . '%"  )');
+            $obj = $obj->whereRaw('(id = ' . (int)$keyword . '  OR name like "%' . $keyword . '%" OR username like "%' . $keyword . '%"  )');
         }
         if ($sort_order && array_key_exists($sort_order, $arrSort)) {
             $field = explode('__', $sort_order)[0];
@@ -106,72 +107,9 @@ class UsersController extends Controller
         $data['dataTr'] = $dataTr;
         $data['pagination'] = $dataTmp->appends(request()->except(['_token', '_pjax']))->links('admin.component.pagination');
         $data['result_items'] = trans('user.admin.result_item', ['item_from' => $dataTmp->firstItem(), 'item_to' => $dataTmp->lastItem(), 'item_total' => $dataTmp->total()]);
-//menu_left
-        $data['menu_left'] = '<div class="pull-left">
-                    <button type="button" class="btn btn-default grid-select-all"><i class="fa fa-square-o"></i></button> &nbsp;
 
-                    <a class="btn   btn-flat btn-danger grid-trash" title="Delete"><i class="fa fa-trash-o"></i><span class="hidden-xs"> ' . trans('admin.delete') . '</span></a> &nbsp;
-
-                    <a class="btn   btn-flat btn-primary grid-refresh" title="Refresh"><i class="fa fa-refresh"></i><span class="hidden-xs"> ' . trans('admin.refresh') . '</span></a> &nbsp;</div>
-                    ';
-//=menu_left
-
-//menu_right
-        $data['menu_right'] = '
-                        <div class="btn-group pull-right" style="margin-right: 10px">
-                           <a href="' . route('admin_user.create') . '" class="btn  btn-success  btn-flat" title="New" id="button_create_new">
-                           <i class="fa fa-plus"></i><span class="hidden-xs">' . trans('admin.add_new') . '</span>
-                           </a>
-                        </div>
-
-                        ';
-//=menu_right
-
-//menu_sort
-
-        $optionSort = '';
-        foreach ($arrSort as $key => $status) {
-            $optionSort .= '<option  ' . (($sort_order == $key) ? "selected" : "") . ' value="' . $key . '">' . $status . '</option>';
-        }
-
-        $data['menu_sort'] = '
-                       <div class="btn-group pull-left">
-                        <div class="form-group">
-                           <select class="form-control" id="order_sort">
-                            ' . $optionSort . '
-                           </select>
-                         </div>
-                       </div>
-
-                       <div class="btn-group pull-left">
-                           <a class="btn btn-flat btn-primary" title="Sort" id="button_sort">
-                              <i class="fa fa-sort-amount-asc"></i><span class="hidden-xs"> ' . trans('admin.sort') . '</span>
-                           </a>
-                       </div>';
-
-        $data['script_sort'] = "$('#button_sort').click(function(event) {
-      var url = '" . route('admin_user.index') . "?sort_order='+$('#order_sort option:selected').val();
-      $.pjax({url: url, container: '#pjax-container'})
-    });";
-
-//=menu_sort
-
-//menu_search
-
-        $data['menu_search'] = '
-                <form action="' . route('admin_user.index') . '" id="button_search">
-                   <div onclick="$(this).submit();" class="btn-group pull-right">
-                           <a class="btn btn-flat btn-primary" title="Refresh">
-                              <i class="fa  fa-search"></i><span class="hidden-xs"> ' . trans('admin.search') . '</span>
-                           </a>
-                   </div>
-                   <div class="btn-group pull-right">
-                         <div class="form-group">
-                           <input type="text" name="keyword" class="form-control" placeholder="' . trans('user.admin.search_place') . '" value="' . $keyword . '">
-                         </div>
-                   </div>
-                </form>';
-//=menu_search
+        $data['sort_order'] = $sort_order;
+        $data['keyword'] = $keyword;
 
         $data['url_delete_item'] = route('admin_user.delete');
 

@@ -42,7 +42,8 @@
     38 => 'App\\Providers\\ScartServiceProvider',
     39 => 'App\\Providers\\ShoppingCartServiceProvider',
     40 => 'App\\Admin\\Providers\\AdminServiceProvider',
-    41 => 'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider',
+    41 => 'App\\Providers\\HelperServicerProvider',
+    42 => 'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider',
   ),
   'eager' => 
   array (
@@ -73,6 +74,7 @@
     24 => 'App\\Providers\\ScartServiceProvider',
     25 => 'App\\Providers\\ShoppingCartServiceProvider',
     26 => 'App\\Admin\\Providers\\AdminServiceProvider',
+    27 => 'App\\Providers\\HelperServicerProvider',
   ),
   'deferred' => 
   array (

@@ -172,6 +172,10 @@ return [
         App\Providers\ShoppingCartServiceProvider::class,
         App\Admin\Providers\AdminServiceProvider::class,
 
+        App\Providers\HelperServicerProvider::class,
+
+
+
         // IDE Helper
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
