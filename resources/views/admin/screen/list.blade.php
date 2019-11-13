@@ -25,7 +25,7 @@
                             <thead>
                             <tr>
                                 @foreach ($listTh as $key => $th)
-                                    <th>{!! $th !!}</th>
+                                    <th {{ ($key == 'action')?'class=text-right':'' }}>{!! $th !!}</th>
                                 @endforeach
                             </tr>
                             </thead>
@@ -33,7 +33,10 @@
                             @foreach ($dataTr as $keyRow => $tr)
                                 <tr>
                                     @foreach ($tr as $key => $trtd)
-                                        <td>{!! $trtd !!}</td>
+                                        <?php
+
+                                        ?>
+                                        <td {{ ($key == 'action')?'class=text-right':'' }}>{!! $trtd !!}</td>
                                     @endforeach
                                 </tr>
                             @endforeach

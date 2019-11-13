@@ -39,7 +39,7 @@ return [
     |
      */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,11 +52,11 @@ return [
     |
      */
 
-    'url' => env('APP_URL', 'http://s-cart.test'),
+    'url' => env('APP_URL', 'http://anytimebazar.test'),
     'asset_url' => env('ASSET_URL', null),
 
     //This value will re-define in database with App\Providers\ScartServiceProvider
-    'admin_prefix' => env('ADMIN_PREFIX', 'sc_admin'),
+    'admin_prefix' => env('ADMIN_PREFIX', 'tz_admin'),
 
     /*
     |--------------------------------------------------------------------------

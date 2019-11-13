@@ -40,16 +40,6 @@ class UsersController extends Controller
             'url_delete_item' => '',
         ];
 
-        $listTh = [
-            'check_row' => '',
-            'id' => trans('user.id'),
-            'user_name' => trans('user.user_name'),
-            'name' => trans('user.name'),
-            'roles' => trans('user.roles'),
-            'permission' => trans('user.permission'),
-            'created_at' => trans('user.created_at'),
-            'action' => trans('user.admin.action'),
-        ];
         $sort_order = request('sort_order') ?? 'id_desc';
         $keyword = request('keyword') ?? '';
         $arrSort = [
@@ -98,16 +88,16 @@ class UsersController extends Controller
                 'permission' => $showPermission,
                 'created_at' => $row['created_at'],
                 'action' => '<a href="' . route('admin_user.edit', ['id' => $row['id']]).'"><span title="' . trans('user.admin.edit') . '" type="button" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></span></a>&nbsp;
-                    ' . ((Admin::user()->id == $row['id'] || in_array($row['id'], SC_GUARD_ADMIN)) ? '' : '<span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('admin.delete') . '" class="btn btn-flat btn-danger"><i class="fa fa-trash"></i></span>')
+                    ' . ((Admin::user()->id == $row['id'] || in_array($row['id'], SC_GUARD_ADMIN)) ? '' : '<span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('admin.delete') . '" class="btn btn-flat btn-danger btn-xs"><i class="fa fa-trash"></i></span>')
                 ,
             ];
         }
 
-        $data['listTh'] = $listTh;
         $data['dataTr'] = $dataTr;
         $data['pagination'] = $dataTmp->appends(request()->except(['_token', '_pjax']))->links('admin.component.pagination');
         $data['result_items'] = trans('user.admin.result_item', ['item_from' => $dataTmp->firstItem(), 'item_to' => $dataTmp->lastItem(), 'item_total' => $dataTmp->total()]);
 
+        $data['arrSort'] = $arrSort;
         $data['sort_order'] = $sort_order;
         $data['keyword'] = $keyword;
 

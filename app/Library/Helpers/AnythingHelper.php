@@ -12,3 +12,12 @@ if (!function_exists('getSelectOptions')) {
         return $html;
     }
 }
+
+if (!function_exists('pp')) {
+    function pp($data) {
+        echo '<pre>';
+        var_dump($data);
+        echo '</pre>';
+        exit();
+    }
+}

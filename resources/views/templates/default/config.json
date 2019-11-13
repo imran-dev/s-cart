@@ -1,8 +1,8 @@
 {
-    "name": "Scart default",
-    "image": "https://s-cart.org/scart-mid.png",
+    "name": "Default",
+    "image": "",
     "auth": "Imran",
     "email": "imrancse019@gmail.com",
-    "website": "https://S-Cart.Org",
+    "website": "https://anytimebazar.com",
     "version": "3.0.0"
 }

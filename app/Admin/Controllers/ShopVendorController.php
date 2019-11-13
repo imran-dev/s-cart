@@ -33,7 +33,7 @@ class ShopVendorController extends Controller
         $listTh = [
             'id' => trans('vendor.id'),
             'name' => trans('vendor.name'),
-            'image' => trans('vendor.image'),
+            'logo' => trans('vendor.logo'),
             'email' => trans('vendor.email'),
             'phone' => trans('vendor.phone'),
             'url' => trans('vendor.url'),
@@ -79,9 +79,9 @@ class ShopVendorController extends Controller
                 'address' => $row['address'],
                 'sort' => $row['sort'],
                 'action' => '
-                    <a href="' . route('admin_vendor.edit', ['id' => $row['id']]) . '"><span title="' . trans('vendor.admin.edit') . '" type="button" class="btn btn-flat btn-primary"><i class="fa fa-edit"></i></span></a>&nbsp;
+                    <a href="' . route('admin_vendor.edit', ['id' => $row['id']]) . '"><span title="' . trans('vendor.admin.edit') . '" type="button" class="btn btn-flat btn-primary btn-xs"><i class="fa fa-edit"></i></span></a>&nbsp;
 
-                  <span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('vendor.admin.delete') . '" class="btn btn-flat btn-danger"><i class="fa fa-trash"></i></span>
+                  <span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('vendor.admin.delete') . '" class="btn btn-flat btn-danger btn-xs"><i class="fa fa-trash"></i></span>
                   ',
             ];
         }
@@ -128,9 +128,9 @@ class ShopVendorController extends Controller
                        </div>';
 
         $data['script_sort'] = "$('#button_sort').click(function(event) {
-      var url = '" . route('admin_vendor.index') . "?sort_order='+$('#order_sort option:selected').val();
-      $.pjax({url: url, container: '#pjax-container'})
-    });";
+              var url = '" . route('admin_vendor.index') . "?sort_order='+$('#order_sort option:selected').val();
+              $.pjax({url: url, container: '#pjax-container'})
+            });";
 
 //=menu_sort
 
@@ -153,8 +153,7 @@ class ShopVendorController extends Controller
 
         $data['url_delete_item'] = route('admin_vendor.delete');
 
-        return view('admin.screen.list')
-            ->with($data);
+        return view('admin.screen.list')->with($data);
     }
 
 /**

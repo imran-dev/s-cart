@@ -6,6 +6,7 @@ return [
     'phone'   => 'Số điện thoại',
     'address' => 'Địa chỉ',
     'image'   => 'Hình ảnh',
+    'logo'   => 'Logo',
     'url'     => 'Website',
     'sort'    => 'Sắp xếp',
     'status'  => 'Status',

@@ -133,9 +133,9 @@ class ShopProductController extends Controller
                 'virtual' => $this->virtuals[$row['virtual']] ?? $row['virtual'],
                 'status' => $row['status'] ? '<span class="label label-success">ON</span>' : '<span class="label label-danger">OFF</span>',
                 'action' => '
-                    <a href="' . route('admin_product.edit', ['id' => $row['id']]) . '"><span title="' . trans('product.admin.edit') . '" type="button" class="btn btn-flat btn-primary"><i class="fa fa-edit"></i></span></a>&nbsp;
+                    <a href="' . route('admin_product.edit', ['id' => $row['id']]) . '"><span title="' . trans('product.admin.edit') . '" type="button" class="btn btn-flat btn-primary btn-xs"><i class="fa fa-edit"></i></span></a>&nbsp;
 
-                    <span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('admin.delete') . '" class="btn btn-flat btn-danger"><i class="fa fa-trash"></i></span>'
+                    <span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('admin.delete') . '" class="btn btn-flat btn-danger btn-xs"><i class="fa fa-trash"></i></span>'
                 ,
             ];
         }

@@ -6,6 +6,7 @@ return [
     'phone'   => 'Phone',
     'address' => 'Address',
     'image'   => 'Image',
+    'logo'    => 'Logo',
     'url'     => 'Website',
     'sort'    => 'Sort',
     'status'  => 'Status',
@@ -27,7 +28,6 @@ return [
         'add_new'        => 'Add new',
         'add_new_title'  => 'Add vendor',
         'add_new_des'    => 'Create a new vendor',
-
         'search_place'   => 'Search name or email',
         'sort_order'     => [
             'id_asc'     => 'ID asc',

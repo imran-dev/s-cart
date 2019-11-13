@@ -17,7 +17,8 @@ class ShopTemplateController extends Controller
         $data = [
             'title' => trans('template.admin.list'),
             'sub_title' => '',
-            'more_info' => trans('template.guide'),
+//            'more_info' => trans('template.guide'),
+            'more_info' => '',
             'icon' => 'fa fa-indent',
             'menu_left' => '',
             'menu_right' => '',

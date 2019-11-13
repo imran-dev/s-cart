@@ -45,17 +45,10 @@
                                         class="hidden-xs">{{ trans('admin.refresh') }}</span></a>
                         </div>
 
-                        <div class="btn-group pull-left">
+                        <div class="btn-group pull-left" style="padding-left: 10px;">
                             <div class="form-group">
                                <select class="form-control" id="order_sort">
-                                {!! getSelectOptions($sort_order, [
-                                        'id__desc' => 'ID DESC',
-                                        'id__asc' => 'ID ASC',
-                                        'username__desc' => 'Name login DESC',
-                                        'username__asc' => 'Name login ASC',
-                                        'name__desc' => 'Name DESC',
-                                        'name__asc' => 'Name ASC',
-                                    ]) !!}
+                                {!! getSelectOptions($sort_order, $arrSort) !!}
                                </select>
                              </div>
                         </div>
@@ -75,10 +68,16 @@
                         <table class="table table-hover">
                             <thead>
                             <tr>
-                                @foreach ($listTh as $key => $th)
-                                    <th>{!! $th !!}</th>
-                                @endforeach
+                                <th></th>
+                                <th>ID</th>
+                                <th>User name</th>
+                                <th>Full name</th>
+                                <th>Roles</th>
+                                <th>Permission</th>
+                                <th>Created at</th>
+                                <th>Action</th>
                             </tr>
+
                             </thead>
                             <tbody>
                             @foreach ($dataTr as $keyRow => $tr)
@@ -92,8 +91,8 @@
                         </table>
                     </div>
                     <div class="box-footer clearfix">
-                        {!! $result_items??'' !!}
-                        {{ $pagination??'' }}
+                        {!! $result_items ?? '' !!}
+                        {{ $pagination ?? '' }}
                     </div>
                 </section>
                 <!-- /.box-body -->
