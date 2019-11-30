@@ -51,10 +51,12 @@ class ShopAttributeGroupController extends Controller
                 'id' => $row['id'],
                 'name' => $row['name'],
                 'type' => $row['type'],
-                'action' => '
-                    <a href="' . route('admin_attribute_group.edit', ['id' => $row['id']]) . '"><span title="' . trans('attribute_group.admin.edit') . '" type="button" class="btn btn-xs btn-flat btn-primary"><i class="fa fa-edit"></i></span></a>&nbsp;
-                  <span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('attribute_group.admin.delete') . '" class="btn btn-flat btn-danger btn-xs"><i class="fa fa-trash"></i></span>
-                  ',
+                'action' => '<a href="' . route('admin_attribute_group.edit', ['id' => $row['id']]) . '">
+                                <span title="' . trans('attribute_group.admin.edit') . '" 
+                                type="button" class="btn btn-xs btn-flat btn-primary"><i class="fa fa-edit"></i></span></a>&nbsp;
+                                <span onclick="deleteItem(' . $row['id'] . ');"  
+                                title="' . trans('attribute_group.admin.delete') . '" 
+                                class="btn btn-flat btn-danger btn-xs"><i class="fa fa-trash"></i></span>',
             ];
         }
 

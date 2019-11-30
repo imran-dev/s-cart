@@ -12,7 +12,6 @@ class ShopBannerController extends Controller
 
     public function index()
     {
-
         $data = [
             'title' => trans('banner.admin.list'),
             'sub_title' => '',
@@ -67,10 +66,11 @@ class ShopBannerController extends Controller
                 'sort' => $row['sort'],
                 'status' => $row['status'] ? '<span class="label label-success">ON</span>' : '<span class="label label-danger">OFF</span>',
                 'action' => '
-                    <a href="' . route('admin_banner.edit', ['id' => $row['id']]) . '"><span title="' . trans('banner.admin.edit') . '" type="button" class="btn btn-flat btn-primary"><i class="fa fa-edit"></i></span></a>&nbsp;
-
-                  <span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('banner.admin.delete') . '" class="btn btn-flat btn-danger"><i class="fa fa-trash"></i></span>
-                  ',
+                    <a href="' . route('admin_banner.edit', ['id' => $row['id']]) . '">
+                        <span title="' . trans('banner.admin.edit') . '" type="button" 
+                        class="btn btn-flat btn-primary btn-xs"><i class="fa fa-edit"></i></span></a>&nbsp;
+                    <span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('banner.admin.delete') . '" 
+                        class="btn btn-flat btn-danger btn-xs"><i class="fa fa-trash"></i></span>',
             ];
         }
 

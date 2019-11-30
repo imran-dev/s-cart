@@ -72,10 +72,10 @@ class ShopSubscribeController extends Controller
                 'email' => $row['email'],
                 'status' => $row['status'] ? '<span class="label label-success">ON</span>' : '<span class="label label-danger">OFF</span>',
                 'action' => '
-                    <a href="' . route('admin_subscribe.edit', ['id' => $row['id']]) . '"><span title="' . trans('subscribe.admin.edit') . '" type="button" class="btn btn-flat btn-primary"><i class="fa fa-edit"></i></span></a>&nbsp;
-
-                  <span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('subscribe.admin.delete') . '" class="btn btn-flat btn-danger"><i class="fa fa-trash"></i></span>
-                  ',
+                    <a href="' . route('admin_subscribe.edit', ['id' => $row['id']]) . '"><span title="' . trans('subscribe.admin.edit') . '" type="button" 
+                    class="btn btn-flat btn-primary btn-xs"><i class="fa fa-edit"></i></span></a>&nbsp;
+                  <span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('subscribe.admin.delete') . '" 
+                  class="btn btn-flat btn-danger btn-xs"><i class="fa fa-trash"></i></span>',
             ];
         }
 

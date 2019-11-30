@@ -87,9 +87,9 @@ class CmsCategoryController extends Controller
                 'status' => $row['status'] ? '<span class="label label-success">ON</span>' : '<span class="label label-danger">OFF</span>',
                 'sort' => $row['sort'],
                 'action' => '
-                    <a href="' . route('admin_cms_category.edit', ['id' => $row['id']]) . '"><span title="' . trans('Modules/Cms/Category.admin.edit') . '" type="button" class="btn btn-flat btn-primary"><i class="fa fa-edit"></i></span></a>&nbsp;
+                    <a href="' . route('admin_cms_category.edit', ['id' => $row['id']]) . '"><span title="' . trans('Modules/Cms/Category.admin.edit') . '" type="button" class="btn btn-flat btn-primary btn-xs"><i class="fa fa-edit"></i></span></a>&nbsp;
 
-                    <span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('admin.delete') . '" class="btn btn-flat btn-danger"><i class="fa fa-trash"></i></span>'
+                    <span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('admin.delete') . '" class="btn btn-flat btn-danger btn-xs"><i class="fa fa-trash"></i></span>'
                 ,
             ];
         }

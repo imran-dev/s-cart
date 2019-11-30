@@ -77,8 +77,8 @@ class RoleController extends Controller
                 'created_at' => $row['created_at'],
                 'updateted_at' => $row['updateted_at'],
                 'action' => (in_array($row['id'], SC_GUARD_ROLES) ? '' : '
-                    <a href="' . route('admin_role.edit', ['id' => $row['id']]) . '"><span title="' . trans('role.admin.edit') . '" type="button" class="btn btn-flat btn-primary"><i class="fa fa-edit"></i></span></a>&nbsp;
-                    ') . ((in_array($row['id'], SC_GUARD_ROLES)) ? '' : '<span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('admin.delete') . '" class="btn btn-flat btn-danger"><i class="fa fa-trash"></i></span>')
+                    <a href="' . route('admin_role.edit', ['id' => $row['id']]) . '"><span title="' . trans('role.admin.edit') . '" type="button" class="btn btn-flat btn-primary btn-xs"><i class="fa fa-edit"></i></span></a>&nbsp;
+                    ') . ((in_array($row['id'], SC_GUARD_ROLES)) ? '' : '<span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('admin.delete') . '" class="btn btn-flat btn-danger btn-xs"><i class="fa fa-trash"></i></span>')
                 ,
             ];
         }
@@ -103,9 +103,7 @@ class RoleController extends Controller
                            <a href="' . route('admin_role.create') . '" class="btn  btn-success  btn-flat" title="New" id="button_create_new">
                            <i class="fa fa-plus"></i><span class="hidden-xs">' . trans('admin.add_new') . '</span>
                            </a>
-                        </div>
-
-                        ';
+                        </div>';
 //=menu_right
 
 //menu_sort

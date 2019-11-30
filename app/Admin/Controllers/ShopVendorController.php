@@ -79,10 +79,10 @@ class ShopVendorController extends Controller
                 'address' => $row['address'],
                 'sort' => $row['sort'],
                 'action' => '
-                    <a href="' . route('admin_vendor.edit', ['id' => $row['id']]) . '"><span title="' . trans('vendor.admin.edit') . '" type="button" class="btn btn-flat btn-primary btn-xs"><i class="fa fa-edit"></i></span></a>&nbsp;
-
-                  <span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('vendor.admin.delete') . '" class="btn btn-flat btn-danger btn-xs"><i class="fa fa-trash"></i></span>
-                  ',
+                    <a href="' . route('admin_vendor.edit', ['id' => $row['id']]) . '"><span title="' . trans('vendor.admin.edit') . '" type="button" 
+                    class="btn btn-flat btn-primary btn-xs"><i class="fa fa-edit"></i></span></a>&nbsp;
+                  <span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('vendor.admin.delete') . '" 
+                  class="btn btn-flat btn-danger btn-xs"><i class="fa fa-trash"></i></span>',
             ];
         }
 

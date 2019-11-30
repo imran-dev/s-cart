@@ -84,9 +84,8 @@ class AdminLogController extends Controller
                 'user_agent' => $row['user_agent'],
                 'input' => $row['input'],
                 'created_at' => $row['created_at'],
-                'action' => '
-                  <span  onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('log.admin.delete') . '" class="btn btn-flat btn-danger"><i class="fa fa-trash"></i></span>
-                  ',
+                'action' => '<span  onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('log.admin.delete') . '" 
+                    class="btn btn-flat btn-danger btn-xs"><i class="fa fa-trash"></i></span>',
             ];
         }
 

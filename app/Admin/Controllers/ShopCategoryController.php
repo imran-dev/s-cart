@@ -88,10 +88,10 @@ class ShopCategoryController extends Controller
                 'status' => $row['status'] ? '<span class="label label-success">ON</span>' : '<span class="label label-danger">OFF</span>',
                 'sort' => $row['sort'],
                 'action' => '
-                    <a href="' . route('admin_category.edit', ['id' => $row['id']]) . '"><span title="' . trans('category.admin.edit') . '" type="button" class="btn btn-xs btn-flat btn-primary"><i class="fa fa-edit"></i></span></a>&nbsp;
-
-                    <span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('admin.delete') . '" class="btn btn-flat btn-danger btn-xs"><i class="fa fa-trash"></i></span>'
-                ,
+                    <a href="' . route('admin_category.edit', ['id' => $row['id']]) . '"><span title="' . trans('category.admin.edit') . '" 
+                        type="button" class="btn btn-xs btn-flat btn-primary"><i class="fa fa-edit"></i></span></a>&nbsp;
+                    <span onclick="deleteItem(' . $row['id'] . ');"  title="' . trans('admin.delete') . '" 
+                        class="btn btn-flat btn-danger btn-xs"><i class="fa fa-trash"></i></span>',
             ];
         }
 
