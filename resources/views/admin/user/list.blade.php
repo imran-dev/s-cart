@@ -38,10 +38,10 @@
                         <div class="pull-left">
                             <button type="button" class="btn btn-default grid-select-all"><i
                                         class="fa fa-square-o"></i></button>
-                            <a class="btn   btn-flat btn-danger grid-trash" title="Delete"><i class="fa fa-trash-o"></i><span
+                            <a class="btn   btn-flat btn-danger grid-trash" title="Delete"><i class="fa fa-trash-o"></i> <span
                                         class="hidden-xs">{{ trans('admin.delete') }}</span></a> &nbsp;
                             <a class="btn   btn-flat btn-primary grid-refresh" title="Refresh"><i
-                                        class="fa fa-refresh"></i><span
+                                        class="fa fa-refresh"></i> <span
                                         class="hidden-xs">{{ trans('admin.refresh') }}</span></a>
                         </div>
 

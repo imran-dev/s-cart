@@ -8,7 +8,7 @@ return [
     'http_method' => 'HTTP method',
     'created_at' => 'Created at',
     'updated_at' => 'Updated at',
-    'password_confirmation' => 'Confirmation',
+    'password_confirmation' => 'Confirm password',
     'slug_validate' => 'Only characters in the group: "A-Z", "a-z", "0-9" and "._-" ',
     'admin' => [
         'title' => 'Permission manager',

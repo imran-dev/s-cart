@@ -44,10 +44,8 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-@php
-  $mode = (sc_config('APP_DEBUG') === 'on')?'red':'blue';
-@endphp
-<body class="hold-transition {{ (Admin::isLoginPage() || Admin::isLogoutPage())?'login-page':'skin-'.$mode.' sidebar-mini' }}">
+
+<body class="hold-transition {{ (Admin::isLoginPage() || Admin::isLogoutPage())?'login-page':'skin-red-light sidebar-mini' }}">
   <div class="wrapper">
   @if ((Admin::isLoginPage() || Admin::isLogoutPage()))
     @yield('main')

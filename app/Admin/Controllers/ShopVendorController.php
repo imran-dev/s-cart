@@ -12,7 +12,6 @@ class ShopVendorController extends Controller
 
     public function index()
     {
-
         $data = [
             'title' => trans('vendor.admin.list'),
             'sub_title' => '',

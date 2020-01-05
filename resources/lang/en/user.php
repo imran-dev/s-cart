@@ -11,7 +11,7 @@ return [
     'created_at' => 'Created at',
     'updated_at' => 'Updated at',
     'member_since' => 'Member since',
-    'password_confirmation' => 'Confirmation',
+    'password_confirmation' => 'Confirm password',
     'username_validate' => 'Only characters in the group: "A-Z", "a-z", "0-9" and ".@_" ',
     'admin' => [
         'title' => 'User manager',
